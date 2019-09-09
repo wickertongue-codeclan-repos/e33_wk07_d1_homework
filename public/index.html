@@ -10,15 +10,8 @@
 <body>
   <h1>To Do List:</h1>
     <div id="app">
-      <ul>
-        <li v-for="item in items">
-          <span>{{item.name}}</span>
-          <span>{{item.priority}}</span>
-        </li>
-      </ul>
-
       <input type="text" v-model="newItem">
-
+      
       <input type="radio" id="priority-high" value="High" v-model="newItemPriority">
       <label for="priority-high">High</label>
       
@@ -26,6 +19,12 @@
       <label for="priority-low">Low</label>
       
       <button v-on:click="saveNewItem(newItem, newItemPriority)">Add New Item</button>
+      <ul>
+        <li v-for="item in items">
+          <span>{{item.name}}</span>
+          <span>{{item.priority}}</span>
+        </li>
+      </ul>
     </div>
   
 </body>
